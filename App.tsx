@@ -26,7 +26,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 type SectionProps = PropsWithChildren<{
-  title: string; //我是徐梓洋，请叫我洋局~~
+  title: string; //我是徐梓洋，请叫我洋局~~,我曾凡军最帅
 }>;
 
 function Section({children, title}: SectionProps): JSX.Element {
