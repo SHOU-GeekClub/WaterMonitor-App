@@ -127,7 +127,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen 曾凡军最帅</Text>
+      <Text>Home Screen 洋局、宋总、祁总最帅</Text>
     </View>
   );
 }
