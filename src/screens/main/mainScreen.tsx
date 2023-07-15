@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { View, Text } from 'react-native';
-class MainScreen extends Component{
+import { View, Text ,StyleSheet, TextStyle} from 'react-native';
+class MainScreen extends Component<any, any>{
      render() {
         return(
          <View>
@@ -9,7 +9,7 @@ class MainScreen extends Component{
      );
      }
 }
-const styles ={
+const styles =StyleSheet.create({
     text: {
       fontSize: 24,
       fontWeight: 'bold',
@@ -17,5 +17,5 @@ const styles ={
       textAlign: 'center',
       marginTop: 20,
     },
-  };
+  });
 export default MainScreen;
