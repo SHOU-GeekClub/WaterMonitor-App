@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Alert } from 'react-native';
 
-const RegisterScreen = () => {
+export default function RegisterScreen(){
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RegisterScreen;
+
