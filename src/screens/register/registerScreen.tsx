@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Alert } from 'react-native';
 
-export default function RegisterScreen(){
+export default function RegisterScreen({navigation}:any){
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleRegister = () => {
     // 处理注册逻辑，例如验证用户名和密码等
 
-    // 弹出注册成功的提示框
-    Alert.alert('注册成功', '恭喜你，注册成功！');
+    navigation.navigate('SuccessScreen');
+    
   };
 
   return (

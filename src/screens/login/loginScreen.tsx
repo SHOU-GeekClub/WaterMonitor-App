@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button ,StyleSheet} from 'react-native';
-
+import { View, Text, TextInput, StyleSheet} from 'react-native';
+import Icon from '@ant-design/react-native/lib/icon'
+import Button from '@ant-design/react-native/lib/button'
+import InputItem from '@ant-design/react-native/lib/input-item'
+import WhiteSpace from '@ant-design/react-native/lib/white-space'
+import Flex from '@ant-design/react-native/lib/flex'
+import WingBlank from '@ant-design/react-native/lib/wing-blank'
+import Toast from '@ant-design/react-native/lib/toast' 
 export default function LoginScreen({navigation}:any){
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -30,26 +36,38 @@ export default function LoginScreen({navigation}:any){
   return (
     <View>
       <Text style={styles.text}>登录页面</Text>
-      <TextInput 
-        style={styles.input}
-        placeholder="用户名"
-        value={username}
-        onChangeText={handleUsernameChange}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="密码"
-        secureTextEntry={true}
-        value={password}
-        onChangeText={handlePasswordChange}
-      />
-      <Button 
-        title="登录" 
-        onPress={handleLogin} />
+      <WhiteSpace size="xl" />
+      <InputItem
+            value={username}
+            onChange={handleUsernameChange}
+            placeholder="用户名">
+            <Icon name="user" />
+          </InputItem>
+       <InputItem
+            clear
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+            placeholder="密码">
+            <Icon name="key"/>
+          </InputItem>
 
-      <Button 
-        title="注册"
-        onPress={handleRegister} />
+          <WhiteSpace size="xl" />
+      <Button type="primary" onPress={handleLogin}>
+      登录
+    </Button>
+      <Button type="primary" onPress={handleRegister}>
+      注册
+    </Button>
+    <WhiteSpace size="xl" />
+      <Flex justify="center">
+      <WingBlank size='lg'>
+          <Icon name="qq" size='lg'/>
+      </WingBlank>
+      <WingBlank size='lg'>
+          <Icon name='wechat' size='lg'/>
+      </WingBlank>
+          </Flex>
     </View>
   );
 };
