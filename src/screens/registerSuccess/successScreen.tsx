@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Alert, Image } from 'react-native';
-import Button from '@ant-design/react-native/lib/button'
+import React from 'react';
+import { View, Text, Image } from 'react-native';
 import Result from '@ant-design/react-native/lib/result';
 import Icon from '@ant-design/react-native/lib/icon'
-import Flex from '@ant-design/react-native/lib/flex';
 function successMessage(){
         return (
             <View>

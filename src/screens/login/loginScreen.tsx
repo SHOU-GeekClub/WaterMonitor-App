@@ -6,8 +6,11 @@ import InputItem from '@ant-design/react-native/lib/input-item'
 import WhiteSpace from '@ant-design/react-native/lib/white-space'
 import Flex from '@ant-design/react-native/lib/flex'
 import WingBlank from '@ant-design/react-native/lib/wing-blank'
-import Toast from '@ant-design/react-native/lib/toast' 
 import axios from 'axios';
+
+export var bodyData ="";      //Application-Token
+export var ID = 22;            //用户ID
+
 export default function LoginScreen({navigation}:any){
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -18,7 +21,7 @@ export default function LoginScreen({navigation}:any){
   const handlePasswordChange = (password:any) => {
     setPassword(password);
   };
-
+  
   //登录函数功能
   const handleLogin = () => {
     // 处理登录逻辑，例如验证用户名和密码等
@@ -33,6 +36,8 @@ export default function LoginScreen({navigation}:any){
     .then(function (response) {
       // 如果状态码为200，登录成功后跳转到 mainScresen
       if(response.status == 200){
+        bodyData = response.data.body;
+        ID = response.data.user.id;
         navigation.navigate('MainScreen');
       }
       console.log(response);

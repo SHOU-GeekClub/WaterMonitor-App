@@ -32,6 +32,7 @@ export default function RegisterScreen({navigation}:any){
     })
     .catch(function (error) {
       console.log(error);
+      console.log(error.response)
     });
   };
 

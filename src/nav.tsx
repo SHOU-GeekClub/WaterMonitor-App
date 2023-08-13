@@ -8,6 +8,8 @@ import LoginScreen from "./screens/login/loginScreen";
 import MainScreen from './screens/main/mainScreen';
 import RegisterScreen from './screens/register/registerScreen';
 import SuccessScreen from './screens/registerSuccess/successScreen';
+import MineScreen from './screens/NavigationBar/mineScreen';
+
 const Stack = createNativeStackNavigator();
 function Nav() {
   return (
@@ -16,6 +18,7 @@ function Nav() {
         <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="MainScreen" component={MainScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="MineScreen" component={MineScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="SuccessScreen" component={SuccessScreen} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
