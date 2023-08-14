@@ -9,7 +9,7 @@ import MainScreen from './screens/main/mainScreen';
 import RegisterScreen from './screens/register/registerScreen';
 import SuccessScreen from './screens/registerSuccess/successScreen';
 import MineScreen from './screens/NavigationBar/mineScreen';
-
+import SearchCustomer from './screens/NavigationBar/searchCustomer';
 const Stack = createNativeStackNavigator();
 function Nav() {
   return (
@@ -19,6 +19,7 @@ function Nav() {
         <Stack.Screen name="MainScreen" component={MainScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="MineScreen" component={MineScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="SearchCustomer" component={SearchCustomer} options={{ headerShown: false }}/>
         <Stack.Screen name="SuccessScreen" component={SuccessScreen} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>

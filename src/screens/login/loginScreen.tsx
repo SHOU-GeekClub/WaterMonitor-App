@@ -9,7 +9,7 @@ import WingBlank from '@ant-design/react-native/lib/wing-blank'
 import axios from 'axios';
 
 export var bodyData ="";      //Application-Token
-export var ID = 22;            //用户ID
+export var ID = 0;            //用户ID
 
 export default function LoginScreen({navigation}:any){
   const [username, setUsername] = useState('');
